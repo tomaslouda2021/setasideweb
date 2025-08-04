@@ -8,20 +8,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SetAside - Automatic Bill Payments Before You Can Spend",
-  description: "SetAside intercepts your paycheck and locks away bill money in a protected wallet. No budgeting required. Bank-grade security, FDIC protected.",
-  keywords: "automatic bill payment, financial automation, paycheck management, budgeting app, bill pay automation",
+  title: "Finn - Your Smart Financial Assistant",
+  description: "Finn automatically sets aside money for bills before you can spend it. Smart paycheck detection, intelligent bill routing, and automated payments for peace of mind.",
+  keywords: "smart financial assistant, automatic bill payment, financial automation, paycheck management, intelligent budgeting, automated savings",
   openGraph: {
-    title: "SetAside - Pay Your Bills Automatically",
-    description: "SetAside intercepts your paycheck and locks away bill money in a protected wallet.",
+    title: "Finn - Your Smart Financial Assistant",
+    description: "Finn automatically sets aside money for bills before you can spend it.",
     type: "website",
     locale: "en_US",
-    siteName: "SetAside",
+    siteName: "Finn",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SetAside - Automatic Bill Payments",
-    description: "Pay your bills automatically before temptation hits. Join 10,000+ professionals using SetAside.",
+    title: "Finn - Smart Financial Assistant",
+    description: "Never miss a bill payment again. Finn automatically manages your money so bills are always paid on time.",
   },
   icons: {
     icon: "/favicon.svg",

@@ -39,7 +39,7 @@ const CTA: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-cyan-600 relative overflow-hidden">
+    <section className="py-20 bg-finn-gradient relative overflow-hidden">
       <div className="absolute inset-0 bg-black/10" />
       
       <motion.div
@@ -59,12 +59,12 @@ const CTA: React.FC = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Secure Your Essentials.{' '}
-            <span className="block mt-2">SetAside the Rest.</span>
+            Ready for Your{' '}
+            <span className="block mt-2">Financial Assistant?</span>
           </h2>
           
           <p className="text-xl text-white/90 mb-10">
-            Join the waitlist and be first to access financial autopilot.
+            Let Finn handle your bills while you focus on living.
           </p>
 
           {!isSubmitted ? (
@@ -88,10 +88,10 @@ const CTA: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="px-6 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-white/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-4 bg-white text-finn-primary rounded-lg font-semibold hover:bg-white/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
-                    <div className="w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-finn-primary border-t-transparent rounded-full animate-spin" />
                   ) : (
                     <>
                       Get Early Access
@@ -109,7 +109,7 @@ const CTA: React.FC = () => {
             >
               <CheckCircle className="text-white" size={24} />
               <p className="text-white text-lg">
-                Thanks! We'll notify you when SetAside launches.
+                Thanks! We'll notify you when Finn launches.
               </p>
             </motion.div>
           )}

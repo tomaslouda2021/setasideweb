@@ -9,26 +9,26 @@ const HowItWorks: React.FC = () => {
     {
       icon: <Link2 size={32} />,
       title: 'Connect Your Bank',
-      description: 'Securely link via Plaid in 30 seconds',
-      color: 'from-blue-500 to-blue-600'
+      description: 'Finn securely connects to your bank in seconds',
+      color: 'from-finn-primary-start to-finn-primary-end'
     },
     {
       icon: <Settings size={32} />,
-      title: 'Set Your Rules',
-      description: 'Choose what % goes to bills (we suggest smart defaults)',
-      color: 'from-cyan-500 to-cyan-600'
+      title: 'Finn Learns Your Bills',
+      description: 'Your assistant analyzes and categorizes your expenses',
+      color: 'from-finn-primary-start to-finn-primary-end'
     },
     {
       icon: <Zap size={32} />,
-      title: 'Watch It Work',
-      description: 'Automatic splits and bill payments, every paycheck',
-      color: 'from-emerald-500 to-emerald-600'
+      title: 'Automatic Protection',
+      description: 'Bill money is secured the moment you get paid',
+      color: 'from-finn-secondary to-finn-secondary'
     },
     {
       icon: <SmilePlus size={32} />,
-      title: 'Peace of Mind',
-      description: 'Spend what\'s left without guilt or overdraft fear',
-      color: 'from-yellow-500 to-yellow-600'
+      title: 'Spend Without Worry',
+      description: 'What\'s left is truly yours - bills are handled',
+      color: 'from-finn-accent to-finn-accent'
     }
   ];
 
@@ -43,16 +43,19 @@ const HowItWorks: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            How It Works
+            How{' '}
+            <span className="bg-finn-gradient bg-clip-text text-transparent">
+              Finn Works
+            </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Four simple steps to financial peace of mind
+          <p className="text-xl text-finn-neutral max-w-2xl mx-auto">
+            Your financial assistant handles everything automatically
           </p>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
           <div className="relative">
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-cyan-200 to-emerald-200 -translate-y-1/2" />
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-finn-primary-start/20 via-finn-secondary/20 to-finn-accent/20 -translate-y-1/2" />
             
             <div className="grid md:grid-cols-4 gap-8 relative">
               {steps.map((step, index) => (
@@ -77,7 +80,7 @@ const HowItWorks: React.FC = () => {
                       {step.title}
                     </h3>
                     
-                    <p className="text-slate-600">
+                    <p className="text-finn-neutral">
                       {step.description}
                     </p>
                   </div>

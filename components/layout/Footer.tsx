@@ -34,13 +34,13 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white pt-16 pb-8">
+    <footer className="bg-finn-dark text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2 md:col-span-1">
             <Logo variant="horizontal" width={150} height={50} />
             <p className="mt-4 text-slate-400 text-sm">
-              Automating financial peace of mind, one paycheck at a time.
+              Your smart financial assistant, working 24/7 to protect your money.
             </p>
             <div className="flex gap-4 mt-6">
               {socialLinks.map((social, index) => (
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-400">
-          <p>&copy; 2025 SetAside. All rights reserved.</p>
+          <p>&copy; 2025 Finn. All rights reserved.</p>
         </div>
       </div>
     </footer>

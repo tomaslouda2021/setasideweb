@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetAside Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .logo-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo {
+            max-width: 512px;
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            color: #1e293b;
+            margin-top: 30px;
+            font-size: 2.5rem;
+        }
+        .download-section {
+            margin-top: 30px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background-color: #1e40af;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .download-btn:hover {
+            background-color: #1d4ed8;
+        }
+        .specs {
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <svg width="512" height="512" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="logo">
+            <!-- Solid blue background (no gradients to avoid compatibility issues) -->
+            <rect width="1024" height="1024" fill="#1e40af" rx="225"/>
+            
+            <!-- White circle ring for security -->
+            <circle cx="512" cy="512" r="300" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="40"/>
+            
+            <!-- Golden security dot at top -->
+            <circle cx="512" cy="212" r="35" fill="#fbbf24"/>
+            
+            <!-- White safe/vault center -->
+            <rect x="372" y="372" width="280" height="280" rx="40" fill="white"/>
+            
+            <!-- Green dollar sign -->
+            <text x="512" y="552" text-anchor="middle" font-family="Arial, sans-serif" 
+                  font-size="200" font-weight="bold" fill="#059669">$</text>
+        </svg>
+        
+        <h1>SetAside Logo</h1>
+        
+        <div class="specs">
+            <p>Size: 1024x1024px</p>
+            <p>Format: SVG (Scalable Vector Graphics)</p>
+            <p>Compatible with all app stores and platforms</p>
+        </div>
+        
+        <div class="download-section">
+            <a href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDwhLS0gU29saWQgYmx1ZSBiYWNrZ3JvdW5kIChubyBncmFkaWVudHMgdG8gYXZvaWQgY29tcGF0aWJpbGl0eSBpc3N1ZXMpIC0tPgogIDxyZWN0IHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIGZpbGw9IiMxZTQwYWYiIHJ4PSIyMjUiLz4KICAKICA8IS0tIFdoaXRlIGNpcmNsZSByaW5nIGZvciBzZWN1cml0eSAtLT4KICA8Y2lyY2xlIGN4PSI1MTIiIGN5PSI1MTIiIHI9IjMwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMykiIHN0cm9rZS13aWR0aD0iNDAiLz4KICAKICA8IS0tIEdvbGRlbiBzZWN1cml0eSBkb3QgYXQgdG9wIC0tPgogIDxjaXJjbGUgY3g9IjUxMiIgY3k9IjIxMiIgcj0iMzUiIGZpbGw9IiNmYmJmMjQiLz4KICAKICA8IS0tIFdoaXRlIHNhZmUvdmF1bHQgY2VudGVyIC0tPgogIDxyZWN0IHg9IjM3MiIgeT0iMzcyIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjI4MCIgcng9IjQwIiBmaWxsPSJ3aGl0ZSIvPgogIAogIDwhLS0gR3JlZW4gZG9sbGFyIHNpZ24gLS0+CiAgPHRleHQgeD0iNTEyIiB5PSI1NTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgCiAgICAgICAgZm9udC1zaXplPSIyMDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMDU5NjY5Ij4kPC90ZXh0Pgo8L3N2Zz4=" 
+               download="setaside-logo.svg" 
+               class="download-btn">
+                Download SVG
+            </a>
+        </div>
+    </div>
+</body>
+</html>

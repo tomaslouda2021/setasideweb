@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Finn Brand CSS Custom Properties */
+:root {
+  /* Primary Ocean Gradient */
+  --finn-primary-start: #0ea5e9;
+  --finn-primary-end: #06b6d4;
+  --finn-primary-gradient: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+  
+  /* Secondary & Accent */
+  --finn-secondary: #10b981;  /* Emerald - success, money, growth */
+  --finn-accent: #f59e0b;     /* Amber - CTAs, highlights, energy */
+  --finn-neutral: #64748b;    /* Slate - body text, professional */
+  
+  /* Supporting Colors */
+  --finn-white: #ffffff;
+  --finn-background: #f8fafc;
+  --finn-dark: #1e293b;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-white text-slate-900;
+  @apply bg-white text-slate-900 font-inter;
 }
 
 @layer utilities {

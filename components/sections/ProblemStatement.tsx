@@ -24,7 +24,7 @@ const ProblemStatement: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-finn-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ const ProblemStatement: React.FC = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Most People Don't Have a Spending Problem —{' '}
-            <span className="text-blue-600">They Have a Timing Problem</span>
+            <span className="bg-finn-gradient bg-clip-text text-transparent">They Have a Timing Problem</span>
           </h2>
         </motion.div>
 
@@ -51,7 +51,7 @@ const ProblemStatement: React.FC = () => {
             >
               <div className="mb-4">{stat.icon}</div>
               <div className="text-4xl font-bold text-slate-900 mb-2">{stat.percentage}</div>
-              <p className="text-slate-600">{stat.description}</p>
+              <p className="text-finn-neutral">{stat.description}</p>
             </motion.div>
           ))}
         </div>
@@ -63,8 +63,8 @@ const ProblemStatement: React.FC = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            The solution isn't better budgeting or more willpower. It's removing the decision entirely.
+          <p className="text-xl text-finn-neutral max-w-3xl mx-auto">
+            The solution isn't better budgeting or more willpower. It's having Finn handle it automatically.
           </p>
         </motion.div>
       </div>
