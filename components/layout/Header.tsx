@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Logo from '@/components/ui/Logo';
 import Button from '@/components/ui/Button';
 import { Menu, X } from 'lucide-react';
+import { APP_URLS } from '@/config/app';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,10 +37,15 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
-            <Button variant="primary" size="md" className="shadow-md hover:shadow-lg">
-              Get Early Access
-            </Button>
+          <div className="hidden lg:flex items-center space-x-4">
+            <a href={APP_URLS.login} className="text-slate-700 hover:text-finn-primary font-medium transition-colors">
+              Log In
+            </a>
+            <a href={APP_URLS.register}>
+              <Button variant="primary" size="md" className="shadow-md hover:shadow-lg">
+                Get Started
+              </Button>
+            </a>
           </div>
 
           <button
@@ -64,10 +70,15 @@ const Header: React.FC = () => {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-4 pb-2">
-              <Button variant="primary" size="md" className="w-full">
-                Get Early Access
-              </Button>
+            <div className="pt-4 pb-2 space-y-3">
+              <a href={APP_URLS.login} className="block text-center py-3 text-slate-700 hover:text-finn-primary font-medium">
+                Log In
+              </a>
+              <a href={APP_URLS.register} className="block">
+                <Button variant="primary" size="md" className="w-full">
+                  Get Started
+                </Button>
+              </a>
             </div>
           </nav>
         </div>

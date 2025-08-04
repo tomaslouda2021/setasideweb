@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { Shield, DollarSign, Zap } from 'lucide-react';
+import { APP_URLS } from '@/config/app';
 
 const Hero: React.FC = () => {
   const trustIndicators = [
@@ -49,9 +50,11 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <Button size="lg" className="shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all">
-              Get Early Access
-            </Button>
+            <a href={APP_URLS.register}>
+              <Button size="lg" className="shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all">
+                Get Started Free
+              </Button>
+            </a>
             <Button variant="outline" size="lg" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>
               See How It Works
             </Button>

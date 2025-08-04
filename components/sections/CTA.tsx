@@ -1,43 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-
-const emailSchema = z.object({
-  email: z.string().email('Please enter a valid email address')
-});
-
-type EmailFormData = z.infer<typeof emailSchema>;
+import Button from '@/components/ui/Button';
+import { ArrowRight } from 'lucide-react';
+import { APP_URLS } from '@/config/app';
 
 const CTA: React.FC = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset
-  } = useForm<EmailFormData>({
-    resolver: zodResolver(emailSchema)
-  });
-
-  const onSubmit = async (data: EmailFormData) => {
-    setIsLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsLoading(false);
-    setIsSubmitted(true);
-    reset();
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
-
   return (
     <section className="py-20 bg-finn-gradient relative overflow-hidden">
       <div className="absolute inset-0 bg-black/10" />
@@ -67,52 +36,26 @@ const CTA: React.FC = () => {
             Let Finn handle your bills while you focus on living.
           </p>
 
-          {!isSubmitted ? (
-            <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                  <input
-                    {...register('email')}
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-6 py-4 rounded-lg text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-white/30"
-                    disabled={isLoading}
-                  />
-                  {errors.email && (
-                    <p className="text-white/90 text-sm mt-2 text-left">
-                      {errors.email.message}
-                    </p>
-                  )}
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="px-6 py-4 bg-white text-finn-primary rounded-lg font-semibold hover:bg-white/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? (
-                    <div className="w-5 h-5 border-2 border-finn-primary border-t-transparent rounded-full animate-spin" />
-                  ) : (
-                    <>
-                      Get Early Access
-                      <ArrowRight size={20} />
-                    </>
-                  )}
-                </button>
-              </div>
-            </form>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-md mx-auto flex items-center gap-3"
-            >
-              <CheckCircle className="text-white" size={24} />
-              <p className="text-white text-lg">
-                Thanks! We'll notify you when Finn launches.
-              </p>
-            </motion.div>
-          )}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={APP_URLS.register}>
+              <Button 
+                size="lg" 
+                className="bg-white text-finn-primary hover:bg-white/90 px-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all flex items-center gap-2"
+              >
+                Get Started Free
+                <ArrowRight size={20} />
+              </Button>
+            </a>
+            <a href={APP_URLS.login}>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-finn-primary px-8"
+              >
+                Log In to Dashboard
+              </Button>
+            </a>
+          </div>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -122,11 +65,7 @@ const CTA: React.FC = () => {
             className="mt-8 flex items-center justify-center gap-6 text-white/80"
           >
             <button className="hover:text-white transition-colors">
-              Refer a friend
-            </button>
-            <span>•</span>
-            <button className="hover:text-white transition-colors">
-              Follow us on Twitter
+              Have questions? Check our FAQ
             </button>
           </motion.div>
         </motion.div>
